@@ -1,0 +1,5 @@
+1. clone this repository: git clone git@github.com:Dreamcatcher600/Rasa-Pro-Test.git
+2. Run Powershell on this dictionary
+3. Run `$env:RASA_LICENSE="YOUR_LICENSE_KEY (license.txt)"`
+4. Run "cd ./simple-rasa-pro-test/appointment-assistant"
+3. Run "./.venv-pip/Scripts/rasa.exe inspect"
