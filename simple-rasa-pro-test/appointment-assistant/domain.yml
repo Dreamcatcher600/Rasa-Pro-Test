@@ -1,0 +1,27 @@
+version: "3.1"
+
+slots:
+  service:
+    type: text
+    mappings:
+      - type: from_llm
+  appointment_date:
+    type: text
+    mappings:
+      - type: from_llm
+  confirmed:
+    type: bool
+    mappings:
+      - type: from_llm
+
+responses:
+  utter_ask_service:
+    - text: "Which service would you like to book?"
+  utter_ask_appointment_date:
+    - text: "What date would you prefer?"
+  utter_ask_confirmed:
+    - text: "Please confirm: book {service} for {appointment_date}?"
+  utter_booking_complete:
+    - text: "Done! Your {service} appointment is booked for {appointment_date}."
+  utter_booking_cancelled:
+    - text: "No problem. The appointment was not booked."

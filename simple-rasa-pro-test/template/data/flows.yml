@@ -1,0 +1,16 @@
+flows:
+  book_appointment:
+    description: Help a user book a simple appointment for a service.
+    steps:
+      - collect: service
+      - collect: appointment_date
+        description: The user's preferred appointment date.
+      - collect: confirmed
+        next:
+          - if: slots.confirmed
+            then: booking_success
+          - else:
+              - action: utter_booking_cancelled
+                next: END
+      - action: utter_booking_complete
+        id: booking_success
